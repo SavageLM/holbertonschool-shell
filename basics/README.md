@@ -11,4 +11,5 @@ long form.
 
 4-listmorefiles when executed will list current directory contents inlong form, including hidden files.
 
-
+stfilesdigitonly when executed will list current directory contens inlong for, including hidden files, with user and group ID displayed 
+numerically.
