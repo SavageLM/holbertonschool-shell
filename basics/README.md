@@ -27,4 +27,7 @@ from /tmp/
 
 10-back when executed will return to previous directory
 
+11-lists when executed will list all files and hidden files for 
+working, parent, and root directories in order.
+
 
