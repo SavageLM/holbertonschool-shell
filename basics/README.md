@@ -5,3 +5,8 @@ This is the README for scripting projects.
 1-listit when executed will list all contents of the directory
 
 2-bring_me_home when executed will return user to home directory.
+
+3-listfiles when executed will list current directory contents in
+long form.
+
+
