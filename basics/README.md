@@ -20,4 +20,6 @@ my_first_directory in the /tmp/ directory.
 
 7-movethatfile when executed will move the betty file from /tmp/ to /tmp/my_first_directory
 
+8-firstdelete when executed will delete the betty file from /tmp/my_first_directory
+
 
