@@ -18,4 +18,6 @@ numerically.
 6-firstdirectory when executed creates a directory named 
 my_first_directory in the /tmp/ directory.
 
+7-movethatfile when executed will move the betty file from /tmp/ to /tmp/my_first_directory
+
 
