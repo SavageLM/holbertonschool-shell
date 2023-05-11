@@ -40,4 +40,7 @@ or is outdated.
 
 15-lets_move when executed will move all files that start with an uppercase to /tmp/u
 
+16-clean emacs when executed will remove any files from current 
+directory that end with ~
+
 
