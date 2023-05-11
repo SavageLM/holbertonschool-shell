@@ -32,4 +32,6 @@ working, parent, and root directories in order.
 
 12-file_type when executed will print the file type of the specified file.
 
+13-symbolic_link when executed will create a symbolic link to /bin/lsin the current working directory
+
 
