@@ -9,4 +9,6 @@ This is the README for scripting projects.
 3-listfiles when executed will list current directory contents in
 long form.
 
+4-listmorefiles when executed will list current directory contents inlong form, including hidden files.
+
 
