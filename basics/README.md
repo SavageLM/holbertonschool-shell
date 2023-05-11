@@ -30,4 +30,6 @@ from /tmp/
 11-lists when executed will list all files and hidden files for 
 working, parent, and root directories in order.
 
+12-file_type when executed will print the file type of the specified file.
+
 
