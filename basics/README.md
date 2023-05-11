@@ -22,4 +22,5 @@ my_first_directory in the /tmp/ directory.
 
 8-firstdelete when executed will delete the betty file from /tmp/my_first_directory
 
-
+9-firstdirdeletion when executed will delete the my_first_directory 
+from /tmp/
