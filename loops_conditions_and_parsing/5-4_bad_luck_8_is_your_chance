@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# This script displays bad luck on fourth, good lick on 8th, and Best School for all other iterations
+
+x=1
+
+while [ $x != 4 ] && [ $x != 8 ] && [ $x -le 10 ]
+do 
+	echo "Best School"
+	x=$((x + 1))
+
+	if [ $x = 4 ]
+		then echo "bad luck"
+		x=$((x + 1))
+	elif [ $x = 8 ]
+		then echo "good luck"
+		x=$((x + 1))
+	fi
+done
