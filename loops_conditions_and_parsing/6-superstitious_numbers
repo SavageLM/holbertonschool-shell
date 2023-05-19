@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+# This script displays lists 1-20, and prints bad luck on 4,9, and 17
+
+x=0
+
+while  [ $x -lt 20 ]
+do 
+	x=$((x + 1))
+
+case $x in 
+4)
+	echo $x
+	echo bad luck from China;;
+9)
+	echo $x
+	echo bad luck from Japan;;	
+17)
+	echo $x
+	echo bad luck from Italy;;
+*)
+	echo $x
+esac
+done
