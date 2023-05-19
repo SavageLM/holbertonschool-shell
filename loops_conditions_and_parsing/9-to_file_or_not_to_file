@@ -7,9 +7,9 @@ if [ -e $X ]
 then echo "school file exists"
 
 	if [ -z $X ]
-	then echo "school file is empty"
+	then echo "school file is not empty"
 
-	else echo "school file is not empty"
+	else echo "school file is empty"
 	fi
 
 	if [ -f $X ]
