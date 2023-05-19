@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# This script displays 1-100, and if it is divisable by 3 or 5 or both, will display a unique message.
+
+x=1
+
+while  [ $x -le 100 ]
+do 
+if ((x % 3 == 0)) && ((x % 5 == 0))
+then 
+	echo "FizzBuzz"
+elif ((x % 3 == 0))
+then
+	echo "Fizz"
+elif  ((x % 5 == 0))
+then
+	echo "Buzz"
+else
+	echo "$x"
+	fi
+	((x++))	
+
+done
