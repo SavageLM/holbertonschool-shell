@@ -6,7 +6,7 @@ X=school
 if [ -e $X ]
 then echo "school file exists"
 
-	if [ -z $X ]
+	if [ -s $X ]
 	then echo "school file is empty"
 
 	else echo "school file is not empty"
