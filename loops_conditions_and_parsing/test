@@ -3,23 +3,16 @@
 
 x=1
 
-while  [ $x -le 9 ] && [ $x != 4 ] && [ $x != 8 ]
+while [ $x -le 10 ]
 do 
 	echo "Best School"
 	x=$((x + 1))
 
-if [ $x = 4 ]
-	then
-		echo "bad luck"
+	if [ $x = 4 ]
+		then echo "bad luck"
 		x=$((x + 1))
-elif [ $x = 8 ]
-	then
-		echo "good luck"
+	elif [ $x = 8 ]
+		then echo "good luck"
 		x=$((x + 1))
-	
-else [ $x = 10 ]
-	echo "Best School"
-
-fi
-	
+	fi
 done
