@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# This script displays all files in directory
+
+L=$(ls)
+for i in $L ; do
+	echo $i | rev | cut -d "-" -f "1" | rev
+done
