@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# This script displays a story using info from /etc/passwd
+
+cmd /etc/passwd | while IFS= ":" read -r VAR
+do
+	echo "The user $VAR is part of the $VAR gang, lives in $VAR and rides $VAR. $VAR's place is protected by the passcode $VAR, more info about the user here: $VAR"
+
+done

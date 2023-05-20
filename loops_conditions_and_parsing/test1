@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# This script displays a story using info from /etc/passwd
+
+cmd /etc/passwd | while IFS= ":" read -r VAR
+do
+	echo "$VAR"
+done
