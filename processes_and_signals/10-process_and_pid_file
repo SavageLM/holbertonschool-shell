@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+#This script creates a file, and runs a script that prints To infinity and beyond, unless it receives a SIG
+
+X=/var/run/myscript.pid
+
+if [ $X ! -e ]
+then touch /var/run/myscript.pid
+fi
+
+chmod u+x $X
+
+echo "#!/usr/bin/env bash
+#This script displays To infinity and beyond infinitly
+x=1
+
+while [ $x = 1 ]
+do echo "To infinity and beyond"
+        sleep 2
+        trap "echo I hate the kill command" 15
+        trap "echo Y U no love me?!" 2
+        trap "rm -r /var/run/myscript.pid" 3,15
+done">$X
