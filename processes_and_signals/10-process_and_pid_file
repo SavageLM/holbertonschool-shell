@@ -3,8 +3,8 @@
 
 X=/var/run/myscript.pid
 
-if [ $X ! -e ]
-then touch /var/run/myscript.pid
+if [ ! -e $X ]
+then touch $X
 fi
 
 chmod u+x $X
