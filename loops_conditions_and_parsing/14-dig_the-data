@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # This script displays the IP and HTTP code of vistors from the Apache Log
 
-awk '{print $10,$1,$9}' apache-access.log | sort -n
+awk '{print $10,$1,$9}' apache-access.log | sort -nr
