@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+#This script displays To infinity and beyond infinitly and I am invincible when recieving SIGTERM
+x=1
+
+while [ $x = 1 ]
+do echo "To infinity and beyond"
+	sleep 2
+	trap "echo I am invincible!!!" 15
+	trap "" SIGTERM
+done
+
+
