@@ -6,8 +6,8 @@ D=manage_my_process
 
 if [ "$1" = start ]
 then 
+	./$D &
 	touch $F
-	./$D
 	echo "echo $$" > $F
 	echo "$D started"
 
