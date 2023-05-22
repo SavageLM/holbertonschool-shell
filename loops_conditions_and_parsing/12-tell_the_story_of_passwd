@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
-# This script displays a story using info from /etc/passwd
+# This script displays Best School 10 times
 
-cmd /etc/passwd | while IFS= ":" read -r name VAR1 VAR2 VAR3 VAR4 VAR5 VAR6 VAR7
+F=/etc/passwd
+
+while IFS=: read -r VAR1 VAR2 VAR3 VAR4 VAR5 VAR6 VAR7
 do
-	echo "The user $VAR1 is part of the $VAR4 gang, lives in $VAR6 and rides $VAR7. $VAR3's place is protected by the passcode $VAR2, more info about the user here: $VAR5"
+        echo "The user $VAR1 is part of the $VAR4 gang, lives in $VAR6 and rides $VAR7. $VAR3's place is protected by the passcode $VAR2, more info about the user here: $VAR5"
 
-done
+done < $F
