@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+#This script creates a file, and runs a script that prints To infinity and beyond, unless it receives a SIG
+
+F=/var/run/myscript.pid
+D=manage_my_process
+
+if [ $1 = start ]
+then 
+	touch $F
+	./$D
+	echo "echo $$" > $F
+	echo "$D started"
+
+elif [ $1 = stop ]
+then
+	exit $D
+	rm -r $F
+	echo "$D stopped"
+
+elif [ $1 = restart ]
+then
+	exit $D
+	rm -r $F
+	./$D
+	touch $F
+	echo "echo $$" > $F
+	echo "$D restarted"
+
+else echo "Usage: mange_my_process {start|stop|restart}"

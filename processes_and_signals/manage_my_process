@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+x=1
+
+while [ $x = 1 ]
+do echo "I am Alive">/tmp/my_process
+	sleep 2
+done
