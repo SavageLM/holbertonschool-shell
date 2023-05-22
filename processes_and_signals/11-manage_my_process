@@ -14,13 +14,13 @@ then
 elif [ "$1" = stop ]
 then
 	pkill -f $D
-	rm -r "$F"
+	rm "$F"
 	echo "$D stopped"
 
 elif [ "$1" = restart ]
 then
 	pkill -f $D
-	rm -r "$F"
+	rm "$F"
 	./$D &
 	touch $F
 	echo "echo $$" > $F
