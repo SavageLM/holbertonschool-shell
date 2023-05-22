@@ -27,3 +27,4 @@ then
 	echo "$D restarted"
 
 else echo "Usage: mange_my_process {start|stop|restart}"
+fi
