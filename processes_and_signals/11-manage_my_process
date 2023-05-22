@@ -26,5 +26,5 @@ then
 	echo "echo $$" > $F
 	echo "$D restarted"
 
-else echo "Usage: mange_my_process {start|stop|restart}"
+else echo "Usage: manage_my_process {start|stop|restart}"
 fi
