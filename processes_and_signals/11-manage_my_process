@@ -4,20 +4,20 @@
 F=/var/run/myscript.pid
 D=manage_my_process
 
-if [ $1 = start ]
+if [ "$1" = start ]
 then 
 	touch $F
 	./$D
 	echo "echo $$" > $F
 	echo "$D started"
 
-elif [ $1 = stop ]
+elif [ "$1" = stop ]
 then
 	exit $D
 	rm -r $F
 	echo "$D stopped"
 
-elif [ $1 = restart ]
+elif [ "$1" = restart ]
 then
 	exit $D
 	rm -r $F
