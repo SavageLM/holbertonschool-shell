@@ -7,22 +7,22 @@ D=manage_my_process
 if [ "$1" = start ]
 then
         ./$D &
-        echo "echo $!" > $F
-        echo "manage_my_process started"
+        echo $! > $F
+        echo "$D started"
 
 elif [ "$1" = stop ]
 then
         sudo pkill -f $D
         rm -r "$F"
-        echo "manage_my_process stopped"
+        echo "$D stopped"
 
 elif [ "$1" = restart ]
 then
         sudo pkill -f $D
         rm -r "$F"
         ./$D &
-        echo "echo $!" > $F
-        echo "manage_my_process restarted"
+        echo $! > $F
+        echo "$D restarted"
 
 else echo "Usage: manage_my_process {start|stop|restart}"
 fi
