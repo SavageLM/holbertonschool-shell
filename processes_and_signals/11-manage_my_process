@@ -7,8 +7,7 @@ D=manage_my_process
 if [ "$1" = start ]
 then 
 	./$D &
-	touch $F
-	echo "echo $$" > $F
+	echo "echo $!" > $F
 	echo "$D started"
 
 elif [ "$1" = stop ]
@@ -22,8 +21,7 @@ then
 	pkill -f $D
 	rm "$F"
 	./$D &
-	touch $F
-	echo "echo $$" > $F
+	echo "echo $!" > $F
 	echo "$D restarted"
 
 else echo "Usage: manage_my_process {start|stop|restart}"
