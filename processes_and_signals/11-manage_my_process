@@ -5,24 +5,24 @@ F=/var/run/myscript.pid
 D=manage_my_process
 
 if [ "$1" = start ]
-then 
-	./$D &
-	echo "echo $!" > $F
-	echo "$D started"
+then
+        ./$D &
+        echo "echo $!" > $F
+        echo "$D started"
 
 elif [ "$1" = stop ]
 then
-	pkill -f $D
-	rm -r "$F"
-	echo "$D stopped"
+        pkill -f $D
+        rm -r "$F"
+        echo "$D stopped"
 
 elif [ "$1" = restart ]
 then
-	pkill -f $D
-	rm -r "$F"
-	./$D &
-	echo "echo $!" > $F
-	echo "$D restarted"
+        pkill -f $D
+        rm -r "$F"
+        ./$D &
+        echo "echo $!" > $F
+        echo "$D restarted"
 
 else echo "Usage: manage_my_process {start|stop|restart}"
 fi
