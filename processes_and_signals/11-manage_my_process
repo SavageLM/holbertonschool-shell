@@ -14,15 +14,15 @@ elif [ "$1" = stop ]
 then
         sudo pkill -f $D
         rm -r "$F"
-        echo "manage_my_process stopped"
+        echo "$D stopped"
 
 elif [ "$1" = restart ]
 then
-	echo "manage_my_process restarted"
         sudo pkill -f $D
         rm -r "$F"
         ./$D &
         echo $! > $F
+	echo "$D restarted"
 
 else echo "Usage: manage_my_process {start|stop|restart}"
 fi
