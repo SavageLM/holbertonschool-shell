@@ -13,7 +13,7 @@ then
 elif [ "$1" = stop ]
 then
         sudo pkill -f $D
-        rm -r "$F"
+        rm -r $F
         echo "$D stopped"
 
 elif [ "$1" = restart ]
