@@ -12,13 +12,13 @@ then
 
 elif [ "$1" = stop ]
 then
-        pkill -f $D
+        sudo pkill -f $D
         rm -r "$F"
         echo "$D stopped"
 
 elif [ "$1" = restart ]
 then
-        pkill -f $D
+        sudo pkill -f $D
         rm -r "$F"
         ./$D &
         echo "echo $!" > $F
