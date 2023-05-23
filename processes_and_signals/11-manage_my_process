@@ -8,13 +8,13 @@ if [ "$1" = start ]
 then
         ./$D &
         echo "echo $!" > $F
-        echo "$D started"
+        echo "manage_my_process started"
 
 elif [ "$1" = stop ]
 then
         sudo pkill -f $D
         rm -r "$F"
-        echo "$D stopped"
+        echo "manage_my_process stopped"
 
 elif [ "$1" = restart ]
 then
@@ -22,7 +22,7 @@ then
         rm -r "$F"
         ./$D &
         echo "echo $!" > $F
-        echo "$D restarted"
+        echo "manage_my_process restarted"
 
 else echo "Usage: manage_my_process {start|stop|restart}"
 fi
