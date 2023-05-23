@@ -1,27 +1,26 @@
 #!/usr/bin/env bash
 #This script creates a file, and runs a script that prints To infinity and beyond, unless it receives a SIG
 
-F=/var/run/myscript.pid
 D=manage_my_process
 
 if [ "$1" = start ]
 then
         ./$D &
-        echo $! > $F
+        echo $! > /var/run/myscript.pid
         echo "$D started"
 
 elif [ "$1" = stop ]
 then
         sudo pkill -f $D
-        rm -r "$F"
+        rm -r /var/run/myscript.pid
         echo "$D stopped"
 
 elif [ "$1" = restart ]
 then
         sudo pkill -f $D
-        rm -r "$F"
+        rm -r /var/run/myscript.pid
         ./$D &
-        echo $! > $F
+        echo $! > /var/run/myscript.pid
         echo "$D restarted"
 
 else echo "Usage: manage_my_process {start|stop|restart}"
